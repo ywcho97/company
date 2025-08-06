@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMAC Digital Solution</title>
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- swiper 슬라이드 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap" onclick="location.href='main.html'">
+        <div class="searchPage">
+            <div class="searchCenter">
+                <div class="logo">
+                    <img src="./img/searchLogo.png" alt="img">
+                </div>
+                <div class="searchList">
+                    <div class="list">
+                        <ul class="sub_text">
+                            <li style="top: 0;"><a href="#none" class="data"># 중대재해처벌법 대응</a></li>
+                            <li><a href="#none" class="data"># 안전보건관리체계 구축</a></li>
+                            <li><a href="#none" class="data"># CBAM 대응</a></li>
+                            <li><a href="#none" class="data"># 제품 공정별 탄소발자국 관리</a></li>
+                            <li><a href="#none" class="data"># 데이터 품질 관리</a></li>
+                            <li><a href="#none" class="data"># AI 데이터 분석 및 시각화</a></li>
+                        </ul>
+                        <div class="searchBtn">
+                            <button type="button">
+                                <img src="./img/searchBtn.png" alt="img">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="main.html" class="bottomLink">홈페이지 바로가기<img src="./img/pageLInk.png" alt="img"></a>
+        </div>
+    </div><!--  class="wrap" -->
+</body>
+
+<script type="text/javascript" src="./js/script.js"></script>
+<style>
+
+</style>
+<script>
+var current1 = 0;
+var subtext = $('.sub_text > li');
+var tim;
+
+function set(){
+	tim = setInterval(function(){
+		var prev1 = subtext.eq(current1);
+		move1(prev1, '0%', '-100%');
+
+		current1++;
+		if(current1 == subtext.length){
+			current1 = 0;
+		}
+
+		var next = subtext.eq(current1);
+		move1(next, '100%', '0%');
+	}, 3000);
+}
+
+function move1(tgg, start, end){
+	tgg.css('top', start).stop().animate({ top: end }, 800);
+}
+
+set();
+
+$('.sub_text').hover(
+	function(){ clearInterval(tim); },
+	function(){ set(); }
+);
+
+</script>
+</html>

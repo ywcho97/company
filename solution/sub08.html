@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMAC Digital Solution</title>
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- swiper 슬라이드 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="modal" id="siteMap">
+        <div class="bg" onclick="closePopup('siteMap')"></div>
+        <div class="modal_cont">
+            <div class="modalTop">
+                <p>사이트맵</p>
+                <button type="button" class="close" onclick="closePopup('siteMap')"><i class="mdi mdi-close"></i></button>
+            </div>
+            <div class="modalCont">
+                <p>서비스</p>
+                <ul>
+                    <li>
+                        <a href="sub01.html">Safe- On</a>
+                    </li>
+                    <li>
+                        <a href="sub02.html">Green-Matrix</a>
+                    </li>
+                    <li>
+                        <a href="sub03.html">K-DQMS</a>
+                    </li>
+                    <li>
+                        <a href="sub04.html">AI Studio</a>
+                    </li>
+                </ul>
+                <p>인사이트</p>
+                <ul>
+                    <li>
+                        <a href="sub05.html">KMAC News</a>
+                    </li>
+                    <li>
+                        <a href="sub06.html">KMAC BIZ & Insight</a>
+                    </li>
+                    <li>
+                        <a href="sub07.html">KMAC TV</a>
+                    </li>
+                    <li>
+                        <a href="sub08.html">Conference</a>
+                    </li>
+                </ul>
+                <p>고객지원</p>
+                <ul>
+                    <li>
+                        <a href="help.html#tabCont1">1:1 문의하기</a>
+                    </li>
+                    <li>
+                        <a href="help.html#tabCont2">데모 시연 신청</a>
+                    </li>
+                </ul>
+                <p>회사소개</p>
+                <ul>
+                    <li>
+                        <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- <div id="include-headerSub"></div> -->
+        <div class="gnb sub">
+            <div class="line"></div>
+            <div class="top_logo logo">
+                <a href="./main.html">
+                    <img src="./img/mainLogo.png" alt="img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a style="cursor:pointer;">서비스</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub01.html">Safe- On</a>
+                                <a href="sub02.html">Green-Matrix</a>
+                                <a href="sub03.html">K-DQMS</a>
+                                <a href="sub04.html">AI Studio</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">인사이트</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub05.html">KMAC News</a>
+                                <a href="sub06.html">KMAC BIZ & Insight</a>
+                                <a href="sub07.html">KMAC TV</a>
+                                <a href="sub08.html">Conference</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">고객지원</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="help.html#tabCont1">1:1 문의하기</a>
+                                <a href="help.html#tabCont2">데모 시연 신청</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">회사소개</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="top_right">
+                <ul> 
+                    <li>
+                        <a href="help.html#tabCont1">문의하기</a>
+                    </li>
+                    <li>
+                        <a href="login.html">로그인</a>
+                    </li>
+                    <li>
+                        <a href="join01.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mob_menu">
+                <button type="button" class="hamber">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </button>
+            </div>
+        </div> <!-- //gnb -->
+        <div class="content_wrap detailPage" id="subPage">
+            <div class="detailTop">
+                <span class="location">Home / 인사이트 / Conference</span>
+                <div class="detailTit">
+                    <h2>Conference</h2>
+                </div>
+                <div class="justify">
+                    <p>
+                        경영혁신과 지식공유의 글로벌 허브인 KMAC 컨퍼런스와 함께하세요.
+                    </p>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="detailCont">
+                <div class="section">
+                    <div class="sectionCont cf_wrap">
+                        <div class="cfBox content">
+                            <div class="img">
+                                <img src="./img/conference1.png" alt="img">
+                            </div>
+                            <div class="cfCont">
+                                <h2>
+                                    DX 컨퍼런스
+                                </h2>
+                                <p>DX 컨퍼런스는 급변하는 디지털 시대에 기업과 조직의 성공적인 디지털 전환(Digital Transformation)을 지원하기 위해 한국능률협회컨설팅(KMAC)이 주최하는 선도적인 지식 공유 플랫폼입니다.</p>
+                            </div>
+                            <div class="viewBtn">
+                                <a href="#none">자세히보기<img src="./img/rightArrow.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="cfBox content">
+                            <div class="img">
+                                <img src="./img/conference2.png" alt="img">
+                            </div>
+                            <div class="cfCont">
+                                <h2>
+                                    대한민국 공공컨퍼런스
+                                </h2>
+                                <p>2005년 청와대 혁신수석실과의 공동 기획으로 시작된 대한민국 공공컨퍼런스는 국내 최고의 공공부문 혁신 플랫폼으로 자리잡았습니다.
+                                매년 1,000명 이상의 정책 전문가, 공공 기관장, 임직원들이 참여하여 정부 정책 방향과 공공부문의 혁신 방안을 모색합니다.</p>
+                            </div>
+                            <div class="viewBtn">
+                                <a href="#none">자세히보기<img src="./img/rightArrow.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="cfBox content">
+                            <div class="img">
+                                <img src="./img/conference3.png" alt="img">
+                            </div>
+                            <div class="cfCont">
+                                <h2>
+                                    ASIA CSCON
+                                </h2>
+                                <p>
+                                    ASIA CSCON은 30년 이상의 역사를 자랑하는 대한민국 최대 규모의 고객중심 경영혁신 컨퍼런스입니다.
+                                    매년 2,500여 명의 기업 및 기관 관계자들이 참여하여 고객중심 경영의 최신 트렌드와 혁신 사례를 공유합니다.
+                                </p>
+                            </div>
+                            <div class="viewBtn">
+                                <a href="#none">자세히보기<img src="./img/rightArrow.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="cfBox content">
+                            <div class="img">
+                                <img src="./img/conference4.png" alt="img">
+                            </div>
+                            <div class="cfCont">
+                                <h2>
+                                    KCCM
+                                </h2>
+                                <p>
+                                    대한민국 채널 & 커뮤니케이션 컨퍼런스(KCCM Conference)는
+                                    콜센터/컨택센터 등의 비대면채널 전략 방향에 대한 이슈를 제시하고 관련한 기술 트렌드 및 선진사례를 공유하는 국내 최대 규모의 컨퍼런스입니다.
+                                </p>
+                            </div>
+                            <div class="viewBtn">
+                                <a href="#none">자세히보기<img src="./img/rightArrow.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="cfBox content">
+                            <div class="img">
+                                <img src="./img/conference5.png" alt="img">
+                            </div>
+                            <div class="cfCont">
+                                <h2>
+                                    지방정부 컨퍼런스
+                                </h2>
+                                <p>
+                                    지방정부 컨퍼런스는 급변하는 시대에 지방의 경쟁력 강화와 혁신을 위한 전문 컨퍼런스입니다. 경영전략, 성과관리, 조직진단, 경영평가, 공공 ESG 경영, 공공데이터 활용 등 지방정부와 공공기관의 핵심 이슈를 다룹니다.
+                                </p>
+                            </div>
+                            <div class="viewBtn">
+                                <a href="#none">자세히보기<img src="./img/rightArrow.png" alt="img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="include-footer"></div> -->
+        <div class="footer">
+            <div class="footerCont">
+                <img src="./img/white_logo.png" alt="img">
+                <div class="footerTop">
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <p>
+                            사업자등록번호 : 116-81-29581 | 통신판매자 신고번호 : 제 2008-서울영등포구-0368호<br/>
+                            직업정보제공사업자 : 서울남부지청 신고번호 J1204020220001 | TEL. 02. 3786. 0114 | 대표이사 사장 한수희
+                        </p>
+                    </div>
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <div class="footerLink">
+                            <ul>
+                                <li><a href="https://kma.or.kr/kr/main.do" target="_blank" rel="noopener noreferrer">한국능률협회</a></li>
+                                <li><a href="https://kmamedia.co.kr/" target="_blank" rel="noopener noreferrer">KMA미디어</a></li>
+                                <li><a href="https://www.kmaresearch.co.kr/main.asp" target="_blank" rel="noopener noreferrer">KMA리서치</a></li>
+                                <li><a href="https://kmaplus.co.kr/" target="_blank" rel="noopener noreferrer">KMA플러스</a></li>
+                                <li><a href="http://hoinam.or.kr/" target="_blank" rel="noopener noreferrer">KMA회남재단</a></li>
+                                <li><a href="https://www.chiefexe.com/index.asp" target="_blank" rel="noopener noreferrer">CE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerText">
+                        <h3>Contact</h3>
+                        <p>(07241) 서울특별시 영등포구 여의공원로 101 (여의도동, C.C.M.M빌딩), 8층</p>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <ul class="footer-bottom-nav">
+                        <li><a href="https://kmac.co.kr/portal/index#util_contact">오시는 길</a></li>
+                        <li><a href="#none" onclick="togglePopup('siteMap')">사이트맵</a></li>
+                        <li><a href="help.html#tabCont1">문의하기</a></li>
+                        <li><a href="https://kmac.co.kr/portal/index#util_terms">이용약관</a></li>
+                        <li class="on"><a href="https://kmac.co.kr/portal/index#util_privacy" class="bold">개인정보처리방침</a></li>
+                    </ul>
+                    <span>ⓒ 2025 KMAC. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div><!--  class="wrap" -->
+</body>
+
+<script type="text/javascript" src="./js/script.js"></script>
+</html>
