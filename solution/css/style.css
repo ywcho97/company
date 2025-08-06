@@ -195,7 +195,7 @@ button.join{font-size: 1.625rem;}
 .searchPage .searchList .list {position: relative;}
 .searchPage .searchList .list ul {position: relative; width: 100%; height: 3.75rem; overflow: hidden; border: 3px solid #fff; border-radius: 1.875rem; padding: .625rem .9375rem;}
 .searchPage .searchList .list ul li {position: absolute; width: calc(100% - 3.125rem); height: 60px; top: 100%}
-.searchPage .searchList .list ul li a.data {line-height: 60px; color: var(--lightgray); font-weight: 400; font-size: 1.125rem; display: block}
+.searchPage .searchList .list ul li a.data {line-height: 54px; color: var(--lightgray); font-weight: 400; font-size: 1.125rem; display: block}
 .searchPage .searchList .list ul li:hover {color: #fff;}
 .searchPage .searchList .list .searchBtn {position: absolute; top: 50%; right: 1.25rem;transform: translateY(-50%);}
 .searchPage .searchList .list .searchBtn i {font-weight: 600;}
