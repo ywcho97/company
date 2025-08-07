@@ -73,6 +73,19 @@ button {cursor: pointer; background: rgba(0, 0, 0, 0);}
 .btn_line {display: inline-block; border: .0625rem solid var(--lightgray); text-align: ceter; width: 15rem; height: 2.5rem; line-height: 2.5rem; border-radius: 2.5rem; font-size: 1rem;}
 input[type="checkbox"]{accent-color: #FF5C00;} /* 체크 표시 흰색으로 */
 
+/* IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+/* 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
 button.next{background-color: var(--deepblue); color: #fff; font-size: 1rem; }
 button.main{background-color: var(--deepblue); color: #fff; font-size: 1rem; }
 button.orange{background-color: var(--orange); color: #fff; font-size: 1rem; }
@@ -92,12 +105,13 @@ button.join{font-size: 1.625rem;}
 
 
 .wrap {background-color: #fff; position: relative;}
-.gnb {position: absolute; width: 100%; display: flex; z-index: 10; padding: 56px 227.24px 36px 194px; justify-content: space-between; transition: all .7s cubic-bezier(0.46, 0.87, 0.18, 1.01); max-height: 179px;}
-.gnb:hover {background-color: rgba(0, 32, 105, .88); max-height: 532px;}
+.gnb {position: absolute; width: 100%; display: flex; z-index: 10; padding: 56px 194px 36px; justify-content: space-between; transition: all .7s cubic-bezier(0.46, 0.87, 0.18, 1.01); max-height: 179px;}
+.gnb:hover {max-height: 532px;}
+.gnb.hover {background-color: rgba(0, 32, 105, .88); max-height: 532px;}
 .gnb .line {width: 100%; height: 0; position: absolute; top: 179px; background-color: #fff; left: 0;}
 .gnb .top_logo {padding-top: 3.75rem; width: 251px;}
 .gnb .top_logo img {width: 100%; min-width: 256px;}
-.gnb nav {width: calc(100% - 12.5rem); font-size: .875em; transition: all .7s cubic-bezier(0.46, 0.87, 0.18, 1.01); padding-top: 3.75rem; margin-left: 136.54px;}
+.gnb nav {width: calc(100% - 12.5rem); font-size: .875em; transition: all .7s cubic-bezier(0.46, 0.87, 0.18, 1.01); padding-top: 3.75rem; margin-left: 130px;}
 .gnb nav>ul {height: 100%; overflow: hidden; transition: all .7s cubic-bezier(0.46, 0.87, 0.18, 1.01); display: flex; justify-content: center; width: 100%; animation: slideDown .5s ease-in-out}
 .gnb nav>ul>li {display: inline-block; width: calc(25% - 10px); overflow: hidden}
 .gnb nav>ul>li>a {display: flex; align-items: center; justify-content: flex-start; height: auto; width: 100%; color: #fff; font-size: 1.4375rem; font-weight: 700;}
@@ -144,7 +158,7 @@ button.join{font-size: 1.625rem;}
 .content.show { opacity: 1; transform: translateY(0);}
 
 /* 가로 스크롤 */
-.degitalCont {padding: 178px 194px 178px 231px; position: relative;}
+.degitalCont {padding: 178px 194px; position: relative;}
 .degitalCont .horizontal-section {height: 2500px; position: relative; background: #fff;}
 .degitalCont .horizontal-section .contTit {display: flex; justify-content: space-between; position: sticky; top: 0; margin-bottom: 92px;}
 .degitalCont .horizontal-section .contTit h2 {color: var(--deepblue); font-size: 6.25rem;}
@@ -152,14 +166,14 @@ button.join{font-size: 1.625rem;}
 .degitalCont .horizontal-section .contTit .rightBtn button {display: flex; align-items: center; gap: 8px;}
 .degitalCont .horizontal-section .horizontal-track {position: sticky; top: 210px; display: flex; height: auto; width: -moz-fit-content; width: fit-content; will-change: transform; overflow-x: hidden; scrollbar-width: none; transition: transform .2s ease-in-out; will-change: transform; background-color: #fff;}
 .degitalCont .horizontal-section .horizontal-track::-webkit-scrollbar {display: none;}
-.degitalCont .horizontal-section .horizontal-track .offeringBox {width: 38.8125rem; height: 823px; border-radius: 1.4375rem; margin-right: 1.5rem; position: relative;}
+.degitalCont .horizontal-section .horizontal-track .offeringBox {width: 38.8125rem; height: 700px; border-radius: 1.4375rem; margin-right: 1.5rem; position: relative;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(1) .bg {background: url(../img/slide1.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(2) .bg {background: url(../img/slide2.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(3) .bg {background: url(../img/offering03.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4) .bg {background: url(../img/offering04.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag {display: inline-block; min-width: 13.125rem; background-color: var(--lightgray); padding: 13px; margin-bottom: 12px; border-radius: 3.125rem; text-align: center}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag p {color: var(--black); font-weight: 700;}
-.degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 57px); overflow: hidden; border-radius: 1.4375rem;}
+.degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 70px); overflow: hidden; border-radius: 1.4375rem;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .gradient {position: absolute; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 32, 105, .8);}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .box_tit {position: absolute; top: 3.125rem; padding: 0 3.4375rem;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .box_tit h3 {font-size: 3.5rem; color: #fff; font-weight: 700;}
@@ -170,12 +184,9 @@ button.join{font-size: 1.625rem;}
 
 /* insight */
 .degitalCont .horizontal-section.insight {height: 68.75rem; padding-bottom: 155px;}
-.degitalCont .horizontal-section.insight .kmacBg {background: url(../img/kmacBg.png) no-repeat; position: absolute; width: 100%; height: 415px; background-size: cover; z-index: 10; opacity: .2}
+.degitalCont .horizontal-section.insight .kmacBg {background: url(../img/kmacBg.png) repeat; position: absolute; width: 100%; height: 415px; background-size: contain; z-index: 10; opacity: .2; left: 0; top: -10px; background-repeat: space;}
 .degitalCont .horizontal-section.insight .offeringBox {height: 415px;}
 .degitalCont .horizontal-section.insight .offeringBox .bg {height: 362px;}
-.degitalCont .horizontal-section.insight .offeringBox:nth-child(2) .bg {background: linear-gradient(90deg, rgb(0, 32, 105), rgb(0, 63, 207));}
-.degitalCont .horizontal-section.insight .offeringBox:nth-child(3) .bg {background: linear-gradient(90deg, rgb(207, 0, 52), rgb(0, 32, 105));}
-.degitalCont .horizontal-section.insight .offeringBox:nth-child(4) .bg {background: linear-gradient(90deg, rgb(0, 207, 200), rgb(0, 26, 105));}
 .degitalCont .horizontal-section.insight .offeringBox .box_tit p {font-size: 20px; font-weight: 700; margin-bottom: 20px;}
 .degitalCont .horizontal-section.insight .offeringBox .box_tit b {font-size: 30px; line-height: 37px; font-weight: 700; color: #fff;}
 
@@ -227,9 +238,9 @@ button.join{font-size: 1.625rem;}
 #siteMap.modal .modal_cont .modalCont ul{width: 100%; display: flex; gap: 20px; margin-bottom: 30px;}
 /* 서브페이지 */
 #subPage{padding: 19.9375rem 194px 9rem 194px; min-width: 1510px;}
-#subPage.detailPage{padding-left: 196px; padding-right: 229px;}
+/* #subPage.detailPage{padding-left: 196px; padding-right: 229px;}
 #subPage.insight{padding-left: 194px; padding-right: 194px;}
-#subPage.help{padding-left: 197px; padding-right: 180px;}
+#subPage.help{padding-left: 197px; padding-right: 180px;} */
 
 /* 서브페이지 메뉴 */
 .gnb.sub {background-color: #fff;}
@@ -527,7 +538,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
 /* footer */
 .footer {width: 100%; height: auto; background-color: var(--black);}
-.footer .footerCont {padding: 97px 194px 58px 205px;}
+.footer .footerCont {padding: 97px 194px 58px;}
 .footer .footerCont img {width: 141px;}
 .footer .footerCont p, .footer .footerCont a {color: #fff; font-size: 1rem; word-break: keep-all;}
 .footer .footerCont .footerTop {margin-top: 40px; display: flex; gap: 50px; align-items: flex-start; justify-content: space-between;}
