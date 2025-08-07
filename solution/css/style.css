@@ -167,10 +167,10 @@ button.join{font-size: 1.625rem;}
 .degitalCont .horizontal-section .horizontal-track {position: sticky; top: 210px; display: flex; height: auto; width: -moz-fit-content; width: fit-content; will-change: transform; overflow-x: hidden; scrollbar-width: none; transition: transform .2s ease-in-out; will-change: transform; background-color: #fff;}
 .degitalCont .horizontal-section .horizontal-track::-webkit-scrollbar {display: none;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox {width: 38.8125rem; height: 700px; border-radius: 1.4375rem; margin-right: 1.5rem; position: relative;}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(1) .bg {background: url(../img/slide1.jpg) center center no-repeat}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(2) .bg {background: url(../img/slide2.jpg) center center no-repeat}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(3) .bg {background: url(../img/offering03.jpg) center center no-repeat}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4) .bg {background: url(../img/offering04.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4n+1) .bg {background: url(../img/slide1.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4n+2) .bg {background: url(../img/slide2.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4n+3) .bg {background: url(../img/offering03.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4n+4) .bg {background: url(../img/offering04.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag {display: inline-block; min-width: 13.125rem; background-color: var(--lightgray); padding: 13px; margin-bottom: 12px; border-radius: 3.125rem; text-align: center}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag p {color: var(--black); font-weight: 700;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 70px); overflow: hidden; border-radius: 1.4375rem;}
