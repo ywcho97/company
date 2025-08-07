@@ -18,15 +18,6 @@
     <!-- datepicker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-    flatpickr("#hiddenDateInput", {
-    dateFormat: "Y-m-d",
-    position: "above", // 또는 "auto", "above", "left", "right"
-        onChange: function(selectedDates, dateStr) {
-            document.getElementById('openDatePicker').textContent = "선택한 일정: " + dateStr;
-        }
-    });
-    </script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -520,18 +511,15 @@ var fileList = fileArr.join(', '); // 배열 값을 쉼표와 공백으로 연�
   
 });
 
-const dateInput = document.getElementById("hiddenDateInput");
-const openBtn = document.getElementById("openDatePicker");
-
-const fp = flatpickr(dateInput, {
+const fp = flatpickr("#hiddenDateInput", {
   dateFormat: "Y-m-d",
+  disableMobile: true,  // 모바일에서 native input 숨기기
   onChange: function(selectedDates, dateStr) {
-    openBtn.textContent = "선택한 일정: " + dateStr;
+    document.getElementById("openDatePicker").textContent = "선택한 일정: " + dateStr;
   }
 });
 
-// 버튼 클릭 시 flatpickr 수동으로 열기
-openBtn.addEventListener("click", function () {
+document.getElementById("openDatePicker").addEventListener("click", () => {
   fp.open();
 });
 
