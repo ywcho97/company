@@ -12,9 +12,11 @@ $(function () {
       $('nav').hover(
         function () {
           $('.twoD').stop(true, true).slideDown(200);
+          $('.gnb').addClass('hover');
         },
         function () {
           $('.twoD').stop(true, true).slideUp(200);
+          $('.gnb').removeClass('hover');
         }
       );
     }
@@ -165,7 +167,8 @@ degitalSections.forEach((section) => {
   let prevScrollY = window.scrollY;
 
   let boxWidth = boxes[0].offsetWidth + parseFloat(getComputedStyle(boxes[0]).marginRight);
-  let maxIndex = boxes.length - Math.floor(window.innerWidth / boxWidth);
+  let maxTranslate = track.scrollWidth - window.innerWidth;
+  let maxIndex = Math.floor(maxTranslate / boxWidth);
 
   function syncSlideIndexWithTransform() {
     const matrix = window.getComputedStyle(track).transform;
@@ -198,10 +201,6 @@ degitalSections.forEach((section) => {
 
   rightBtn?.addEventListener('click', () => {
     syncSlideIndexWithTransform();
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const maxTranslate = track.scrollWidth - window.innerWidth;
-
     if (slideIndex < maxIndex) {
       slideIndex++;
       let translateX = slideIndex * boxWidth + getOffset(true);
@@ -210,6 +209,9 @@ degitalSections.forEach((section) => {
       }
       track.style.transform = `translateX(-${translateX}px)`;
       enableManualMode();
+
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
       scrollToCorrespondingY(translateX, maxTranslate, sectionTop, sectionHeight, true);
     }
   });
@@ -225,7 +227,6 @@ degitalSections.forEach((section) => {
       if (slideIndex > 0) {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        const maxTranslate = track.scrollWidth - window.innerWidth;
         scrollToCorrespondingY(translateX, maxTranslate, sectionTop, sectionHeight, false);
       }
     }
@@ -241,10 +242,10 @@ degitalSections.forEach((section) => {
 
     const scrollStart = scrollY - sectionTop;
     const maxScroll = sectionHeight - window.innerHeight;
-    const maxTranslate = track.scrollWidth - window.innerWidth;
     const offset = getOffset(isScrollingDown);
+    const adjustedSectionEnd = sectionTop + maxScroll + 1; // 세로 스크롤 전환 지점
 
-    if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+    if (scrollY >= sectionTop && scrollY <= adjustedSectionEnd) {
       const progress = Math.min(Math.max(scrollStart / maxScroll, 0), 1);
       const translateX = progress * maxTranslate + offset;
       track.style.transform = `translateX(-${translateX}px)`;
@@ -260,9 +261,13 @@ degitalSections.forEach((section) => {
 
   window.addEventListener('resize', () => {
     boxWidth = boxes[0].offsetWidth + parseFloat(getComputedStyle(boxes[0]).marginRight);
-    maxIndex = boxes.length - Math.floor(window.innerWidth / boxWidth);
+    maxTranslate = track.scrollWidth - window.innerWidth;
+    maxIndex = Math.floor(maxTranslate / boxWidth);
   });
 });
+
+
+
 
 
 /* 전체동의 */
