@@ -623,7 +623,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .main_slide .swiper-slide .slide_ment .slide_tit p{min-width: 9.375rem;}
     .main_slide .swiper-slide .slide_ment .slide_import p{font-size: 2rem; line-height: 2.75rem; text-align: center;}
     .main_slide .swiper-slide .slide_ment .slide_import span{font-size: 1rem; line-height: 1.5rem; display: block; text-align: center;}
-    .main_slide .swiper-slide .slide_btn{left: 50%; transform: translateX(-50%);}
+    .main_slide .swiper-slide .slide_btn{left: 50%; transform: translateX(-50%); bottom: -100px;}
     /* .main_slide .swiper-slide .slide_btn button{width: 100px;} */
 
     .main_slide .slide_control{right: auto; left: 50%; transform: translateX(-50%) rotate(270deg); z-index: 2;}
