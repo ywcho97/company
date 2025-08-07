@@ -91,7 +91,7 @@ button.main{background-color: var(--deepblue); color: #fff; font-size: 1rem; }
 button.orange{background-color: var(--orange); color: #fff; font-size: 1rem; }
 button.end{background-color: #D9D9D9; color: #fff; font-size: 1rem; }
 button.line{background-color: transparent; color: var(--deepblue); border: 1px solid var(--deepblue); font-size: 1rem; }
-button.join{font-size: 1.625rem;}
+button.join{font-size: 1.625rem !important;}
 .displayb{display: block !important;}
 .displayn{display: none !important;}
 .displayf{display: flex !important;}
@@ -268,7 +268,7 @@ button.join{font-size: 1.625rem;}
 .sub_wrap .required { color: var(--orange); font-weight: bold; }
 
 .sub_wrap .btn_wrap{width: 100%; display: flex; gap: 50px; justify-content: center; margin-top: 100px;}
-.sub_wrap .btn_wrap button{width: 264px; height: auto; min-height: 60px; border-radius: 60px; font-weight: 700;}
+.sub_wrap .btn_wrap button{width: 264px; height: auto; min-height: 60px; border-radius: 60px; font-weight: 700; font-size: 20px;}
 
 /* 회원가입 02, 문의 */
 .inputGroup .inputText {display: inline-block; margin-bottom: 20px; margin-right: 10px;}
@@ -783,7 +783,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sub_wrap .inputText_wrap .inputText .inputArea.checkbox-grid{grid-template-columns: repeat(1, 1fr);}
     /* .flatpickr-input.flatpickr-mobile{display: none;} */
 
-    .sub_wrap .btn_wrap button{width: 100%; font-size: 16px;}
+    .sub_wrap .btn_wrap button{width: 100%; font-size: 18px;}
     .find_wrap input{width: 100%; padding: 10px 5px;}
     .find_wrap .btn_wrap{width: 100%; position: relative; margin-top: 20px; padding: 0;}
     .result_wrap>p{font-size: 2rem; line-height: 2.5rem; word-break: keep-all;}
