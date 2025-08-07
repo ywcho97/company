@@ -683,6 +683,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     /* 상세페이지 */
     .detailPage *{letter-spacing: -1px;}
     .detailTop .detailTit img{width: calc(100% - 80px);}
+    .detailTop .detailTit .search_wrap input{text-align: left;}
+    .detailTop .detailTit .search_wrap img{width: 100%;}
     .detailTop .detailTit h2{font-size: 4rem;}
     .detailTop .line{display: none;}
 
