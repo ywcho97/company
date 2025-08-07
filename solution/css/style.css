@@ -141,7 +141,7 @@ button.join{font-size: 1.625rem !important;}
 .main_slide .swiper-slide .slide_ment .slide_import {width: 100%; line-height: 2.5rem;}
 .main_slide .swiper-slide .slide_ment .slide_import p {color: #fff; font-size: 3.625rem; line-height: 4.375rem; font-weight: 700;}
 .main_slide .swiper-slide .slide_ment .slide_import span {color: #fff; font-size: 1.875rem; line-height: 4.375rem; font-weight: 500;}
-.main_slide .swiper-slide .slide_btn {position: absolute; bottom: -100px;}
+.main_slide .swiper-slide .slide_btn {position: absolute; bottom: -200px;}
 .main_slide .swiper-slide .slide_btn button {color: #fff; padding: 1.5rem 0; text-align: center; width: 18.75rem; border-radius: 2.5rem; border: .0625rem solid #fff; font-size: 18px;}
 .main_slide .slide_control {display: flex; flex-direction: column; align-items: center; position: absolute; right: 3.125rem; bottom: 0; flex-wrap: wrap}
 .main_slide .slide_control .arrow-icon {position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0%); color: #fff; font-size: 1.25rem; background: none; border: none; cursor: pointer; z-index: 1000;}
