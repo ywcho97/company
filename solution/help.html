@@ -520,18 +520,21 @@ var fileList = fileArr.join(', '); // 배열 값을 쉼표와 공백으로 연�
   
 });
 
-  // flatpickr 초기화
-const fp = flatpickr("#hiddenDateInput", {
+const dateInput = document.getElementById("hiddenDateInput");
+const openBtn = document.getElementById("openDatePicker");
+
+const fp = flatpickr(dateInput, {
   dateFormat: "Y-m-d",
-  onChange: function(selectedDates, dateStr, instance) {
-    document.getElementById('openDatePicker').textContent = "선택한 일정: " + dateStr;
+  onChange: function(selectedDates, dateStr) {
+    openBtn.textContent = "선택한 일정: " + dateStr;
   }
 });
 
-// 버튼 클릭 시 datepicker 열기
-document.getElementById('openDatePicker').addEventListener('click', function() {
+// 버튼 클릭 시 flatpickr 수동으로 열기
+openBtn.addEventListener("click", function () {
   fp.open();
 });
+
 </script>
 <script type="text/javascript" src="./js/script.js"></script>
 </html>
