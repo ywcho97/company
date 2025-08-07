@@ -700,7 +700,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .detailCont .section .mainTit>h2{font-size: 2.5rem;}
     .detailCont .section .mainTit>h3{font-size: 2rem;}
     .mainCont .box_wrap{flex-direction: column; align-items: center;}
-    .sectionCont.function .about dl dd{font-size: 1.25rem; line-height: 1.75rem; margin-bottom: 10px;}
+    .sectionCont.function .about dl dt{margin-bottom: 10px;}
+    .sectionCont.function .about dl dd{font-size: 1.25rem; line-height: 1.75rem; margin-bottom: 5px;}
     .sectionCont.function .about.blue dl dd{margin: 0; font-size: 1.25rem; line-height: 1.75rem; margin-bottom: 10px;}
     .section{margin-top: 50px;}
     .sectionTit h2{font-size: 2.25rem;}
