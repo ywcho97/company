@@ -20,7 +20,7 @@ caption {display: none;}
     --deepblue: #002069;
     --gray: #737373;
     --lightgray: #DCDDDE;
-
+    color-scheme: light only;
 
     --mdi: 'Material Design Icons';
 }
@@ -141,11 +141,11 @@ button.join{font-size: 1.625rem;}
 .main_slide .swiper-slide .slide_ment .slide_import {width: 100%; line-height: 2.5rem;}
 .main_slide .swiper-slide .slide_ment .slide_import p {color: #fff; font-size: 3.625rem; line-height: 4.375rem; font-weight: 700;}
 .main_slide .swiper-slide .slide_ment .slide_import span {color: #fff; font-size: 1.875rem; line-height: 4.375rem; font-weight: 500;}
-.main_slide .swiper-slide .slide_btn {position: absolute; bottom: 6.25rem; left: 194px;}
+.main_slide .swiper-slide .slide_btn {position: absolute; bottom: -100px;}
 .main_slide .swiper-slide .slide_btn button {color: #fff; padding: 1.5rem 0; text-align: center; width: 18.75rem; border-radius: 2.5rem; border: .0625rem solid #fff; font-size: 18px;}
 .main_slide .slide_control {display: flex; flex-direction: column; align-items: center; position: absolute; right: 3.125rem; bottom: 0; flex-wrap: wrap}
 .main_slide .slide_control .arrow-icon {position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0%); color: #fff; font-size: 1.25rem; background: none; border: none; cursor: pointer; z-index: 1000;}
-.main_slide .slide_control .time {width: 66px; height: 66px; position: relative; z-index: 999; margin-bottom: 20px;}
+.main_slide .slide_control .time {width: 66px; height: 66px; position: relative; z-index: 999; margin-bottom: 20px; aspect-ratio: 1 / 1; /* 정사각형 유지 */}
 .main_slide .slide_control .time .progress-ring {transform: rotate(-90deg);}
 .main_slide .slide_control .time .progress-ring_circle {stroke-dasharray: 201.06; /* 2 * π * 32 */ stroke-dashoffset: 201.06; transition: stroke-dashoffset 3s linear;}
 
@@ -204,13 +204,13 @@ button.join{font-size: 1.625rem;}
 .searchPage .searchCenter .logo {text-align: center; margin-bottom: .625rem;}
 .searchPage .searchCenter .logo img {width: 90%}
 .searchPage .searchList .list {position: relative;}
-.searchPage .searchList .list ul {position: relative; width: 100%; height: 3.75rem; overflow: hidden; border: 3px solid #fff; border-radius: 1.875rem; padding: .625rem .9375rem;}
-.searchPage .searchList .list ul li {position: absolute; width: calc(100% - 3.125rem); height: 60px; top: 100%}
-.searchPage .searchList .list ul li a.data {line-height: 54px; color: var(--lightgray); font-weight: 400; font-size: 1.125rem; display: block}
+.searchPage .searchList .list ul {position: relative; width: 100%; height: 60px; overflow: hidden; border: 3px solid #fff; border-radius: 30px; padding: 10px 15px;}
+.searchPage .searchList .list ul li {position: absolute; width: calc(100% - 50px); height: 60px; top: 100%}
+.searchPage .searchList .list ul li a.data {line-height: 54px; color: var(--lightgray); font-weight: 400; font-size: 18px; display: block}
 .searchPage .searchList .list ul li:hover {color: #fff;}
-.searchPage .searchList .list .searchBtn {position: absolute; top: 50%; right: 1.25rem;transform: translateY(-50%);}
+.searchPage .searchList .list .searchBtn {position: absolute; top: 50%; right: 20px;transform: translateY(-50%);}
 .searchPage .searchList .list .searchBtn i {font-weight: 600;}
-.searchPage .bottomLink {position: absolute; bottom: 3.125rem; left: 50%; transform: translateX(-50%); color: #fff; font-size: 12px; display: flex; align-items: center;}
+.searchPage .bottomLink {position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 12px; display: flex; align-items: center;}
 .searchPage .bottomLink img{margin-left: 8.5px;}
 
 /* 모달 */
@@ -597,7 +597,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     
     .slide_menu.pc {display: none !important;}
     .slide_menu.mob {display: block !important;}
-    .mob_menu .hamber {width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; position: relative;}
+    .mob_menu .hamber {width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; position: relative; margin-left: 10px;}
     .mob_menu .hamber i {position: absolute; left: 0; right: 0; margin: auto; height: 1px; width: 20px; background-color: #fff; transition: all .3s cubic-bezier(0.4, 0.1, 0.3, 1.3);}
     .top_wrap.transparent .mob_menu .hamber i {background-color: #fff;}
 
@@ -622,8 +622,12 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .main_slide .swiper-slide .slide_ment .slide_tit p{min-width: 9.375rem;}
     .main_slide .swiper-slide .slide_ment .slide_import p{font-size: 2rem; line-height: 2.75rem; text-align: center;}
     .main_slide .swiper-slide .slide_ment .slide_import span{font-size: 1rem; line-height: 1.5rem; display: block; text-align: center;}
-    .main_slide .swiper-slide .slide_btn{bottom: 20px; left: 20px;}
-    .main_slide .swiper-slide .slide_btn button{width: 100px;}
+    .main_slide .swiper-slide .slide_btn{left: 50%; transform: translateX(-50%);}
+    /* .main_slide .swiper-slide .slide_btn button{width: 100px;} */
+
+    .main_slide .slide_control .time {width: 44px; height: 44px; margin-bottom: 30px;}
+    .main_slide .slide_control .time svg{width: 44px; height: 44px;}
+    .main_slide .slide_control .arrow-icon{bottom: 10px;}
 
     /* 메인 가로스크롤 */
     .degitalCont{padding: 50px 20px 0;}
@@ -689,12 +693,13 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .detailTop .justify p{width: 100%; font-size: 16px; word-break: keep-all;}
     .detailTop .justify .btn_wrap{width: 100%; margin-top: 10px; flex-direction: column;}
     .detailTop .justify .btn_wrap button{font-size: 14px; margin-right: 0; margin-bottom: 10px;}
-    .mainCont .box{width: 100%;}
-    .mainCont .box p{font-size: 2rem;}
+    .mainCont .box{width: 100%; height: auto;}
+    .mainCont .box img{padding-top: 10px;}
+    .mainCont .box p{font-size: 2rem; padding-bottom: 10px; margin-top: 10px;}
     .detailCont .section .mainTit{padding-top: 0;}
     .detailCont .section .mainTit>h2{font-size: 2.5rem;}
     .detailCont .section .mainTit>h3{font-size: 2rem;}
-    .mainCont .box_wrap{flex-direction: column;}
+    .mainCont .box_wrap{flex-direction: column; align-items: center;}
     .sectionCont.function .about dl dd{font-size: 1.25rem; line-height: 1.75rem; margin-bottom: 10px;}
     .sectionCont.function .about.blue dl dd{margin: 0; font-size: 1.25rem; line-height: 1.75rem; margin-bottom: 10px;}
     .section{margin-top: 50px;}
@@ -763,7 +768,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .inputGroup .inputText{width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea{flex-wrap: wrap;}
     .sub_wrap .inputText_wrap .inputText .inputArea select{min-width: auto;}
-    .sub_wrap .inputText_wrap .inputText .inputArea input[type="text"]{min-width: auto;}
+    .sub_wrap .inputText_wrap .inputText .inputArea input[type="text"]{min-width: auto; max-width: 100%;}
+    .sub_wrap .inputText_wrap .inputText .inputArea input[type="password"]{min-width: auto; max-width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea label{width: 100%; font-size: 1.25rem;}
     .sub_wrap .inputText_wrap .inputText .inputBox{padding: 10px; font-size: 1.25rem;}
     .sub_wrap .inputText_wrap .inputText .inputBox .usage{flex-direction: column;}
@@ -773,6 +779,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
     .sub_wrap .btn_wrap button{width: 100%; font-size: 16px;}
     .find_wrap input{width: 100%; padding: 10px 5px;}
+    .find_wrap .btn_wrap{width: 100%; position: relative; margin-top: 20px; padding: 0;}
     .result_wrap>p{font-size: 2rem; line-height: 2.5rem; word-break: keep-all;}
     /* 모달 */
     .modal .modal_cont{min-width: auto; width: calc(100% - 40px);}
