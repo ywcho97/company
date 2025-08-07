@@ -223,7 +223,7 @@ button.join{font-size: 1.625rem !important;}
 .modal .modal_cont .modalCont{text-align: center;}
 .modal .modal_cont .modalCont p{font-size: 20px; font-weight: 600;}
 .modal .modal_cont .modalCont .btn_wrap{margin-top: 20px; display: flex; gap: 10px;}
-.modal .modal_cont .modalCont .btn_wrap .btn{width: 100%; border-radius: 10px; height: 40px;}
+.modal .modal_cont .modalCont .btn_wrap .btn{width: 100%; border-radius: 10px; height: 40px; font-size: 16px;}
 
 /* 사이트맵 */
 #siteMap.modal .modal_cont{background-color: var(--black); width: 50%; min-width: 700px;}
@@ -773,7 +773,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sub_wrap .join_wrap{display: block;}
     .inputGroup .inputText{width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea{flex-wrap: wrap;}
-    .sub_wrap .inputText_wrap .inputText .inputArea select{min-width: auto;}
+    .sub_wrap .inputText_wrap .inputText .inputArea select{min-width: auto; font-size: 16px;}
+    .sub_wrap .inputText_wrap .inputText .inputArea input{font-size: 16px;}
     .sub_wrap .inputText_wrap .inputText .inputArea input[type="text"]{min-width: auto; max-width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea input[type="password"]{min-width: auto; max-width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea label{width: 100%; font-size: 1.25rem;}
@@ -781,6 +782,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sub_wrap .inputText_wrap .inputText .inputBox .usage{flex-direction: column;}
     .sub_wrap .inputText_wrap .inputText .inputBox .usage .usageCont{border-right: 0; padding-right: 0; font-size: 1.25rem;}
     .sub_wrap .inputText_wrap .inputText .inputArea.checkbox-grid{grid-template-columns: repeat(1, 1fr);}
+    .sub_wrap .inputText_wrap .inputText .must span{font-size: 14px;}
     /* .flatpickr-input.flatpickr-mobile{display: none;} */
 
     .sub_wrap .btn_wrap button{width: 100%; font-size: 18px;}
