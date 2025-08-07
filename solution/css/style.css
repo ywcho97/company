@@ -781,7 +781,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sub_wrap .inputText_wrap .inputText .inputBox .usage{flex-direction: column;}
     .sub_wrap .inputText_wrap .inputText .inputBox .usage .usageCont{border-right: 0; padding-right: 0; font-size: 1.25rem;}
     .sub_wrap .inputText_wrap .inputText .inputArea.checkbox-grid{grid-template-columns: repeat(1, 1fr);}
-    .flatpickr-input.flatpickr-mobile{display: none;}
+    /* .flatpickr-input.flatpickr-mobile{display: none;} */
 
     .sub_wrap .btn_wrap button{width: 100%; font-size: 16px;}
     .find_wrap input{width: 100%; padding: 10px 5px;}
