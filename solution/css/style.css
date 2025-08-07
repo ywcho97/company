@@ -314,6 +314,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 #hiddenDateInput {visibility: hidden; position: absolute; z-index: -1; height: 0; padding: 0; margin: 0; border: none;}
 .custom-date-btn {display: inline-block; height: 30px; line-height: 30px; padding: 0px 20px; background-color: var(--deepblue); color: #fff; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; }
 .flatpickr-calendar {margin-top: 30px !important;}
+
 /* 회원가입 03 */
 .welcome{text-align: center; font-size: 3.5rem; line-height: 4.375rem; font-weight: 700; word-break: keep-all;}
 
@@ -625,6 +626,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .main_slide .swiper-slide .slide_btn{left: 50%; transform: translateX(-50%);}
     /* .main_slide .swiper-slide .slide_btn button{width: 100px;} */
 
+    .main_slide .slide_control{right: auto; left: 50%; transform: translateX(-50%) rotate(270deg); z-index: 2;}
     .main_slide .slide_control .time {width: 44px; height: 44px; margin-bottom: 30px;}
     .main_slide .slide_control .time svg{width: 44px; height: 44px;}
     .main_slide .slide_control .arrow-icon{bottom: 10px;}
@@ -761,11 +763,14 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
     .cf_wrap{flex-direction: column;}
     .cf_wrap .cfBox{width: 100%; padding: 10px 10px 100px 10px; height: auto;}
-    .cf_wrap .cfBox .cfCont h2{font-size: 2.5rem;}
+    .cf_wrap .cfBox .cfCont h2{font-size: 1.75rem;}
+    .cf_wrap .cfBox .cfCont p{font-size: 1.5rem; line-height: 2rem;}
     .viewBtn{bottom: 10px; right: 10px;}
+    .viewBtn a{font-size: 1.25rem;}
 
     /* 문의 */
     .tab_content .tabs .tab_btns button{width: calc(100% / 2 - 2px);}
+    .sub_wrap .join_wrap{display: block;}
     .inputGroup .inputText{width: 100%;}
     .sub_wrap .inputText_wrap .inputText .inputArea{flex-wrap: wrap;}
     .sub_wrap .inputText_wrap .inputText .inputArea select{min-width: auto;}
