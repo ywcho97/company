@@ -349,7 +349,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 .find_wrap input:last-child{margin-bottom: 0;}
 
 .find_wrap .btn_wrap {display: block; margin-top: 0; position: absolute; right: 0; bottom: 0; width: auto;}
-.find_wrap .btn_wrap button{width: 150px; height: 45px; float: right; font-size: 18px; min-height: auto;}
+.find_wrap .btn_wrap button{width: 165px; height: 45px; float: right; font-size: 18px; min-height: auto; background-color: #002069E0;}
 .find_wrap .findInfo{text-align: center;}
 .find_wrap .findInfo h3{font-size: 18px; font-weight: 700; margin-bottom: 5px;}
 .find_wrap .findInfo p{font-size: 16px; font-weight: 600;}
