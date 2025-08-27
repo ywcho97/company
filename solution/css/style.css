@@ -566,6 +566,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .gnb nav{margin-left: 100px;}
     .main_slide .swiper-slide .slide_ment{left: 20px;}
     .main_slide .swiper-slide .slide_btn{bottom: -10rem;}
+    .main_slide .swiper-slide .slide_ment .slide_import p{font-size: 3rem; line-height: 3.5rem;}
+    .main_slide .swiper-slide .slide_ment .slide_import span{font-size: 1.75rem;}
 
     .degitalCont .horizontal-section .contTit{margin-bottom: 50px;}
     .degitalCont .horizontal-section .horizontal-track{top: 140px;}
