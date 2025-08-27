@@ -1,14 +1,14 @@
-
 $(function () {
   // GNB 메뉴 반응형 동작
-  let isMobileView = window.innerWidth <= 799;
+  let isMobileView = window.innerWidth <= 1024;
 
   function setNavInteraction() {
-    const isMobile = window.innerWidth <= 799;
+    const isMobile = window.innerWidth <= 1024;
     $('nav li').off('mouseenter mouseleave click');
     $('.twoD').stop(true, true).slideUp(0);
 
     if (!isMobile) {
+      // PC → hover
       $('nav').hover(
         function () {
           $('.twoD').stop(true, true).slideDown(200);
@@ -19,19 +19,40 @@ $(function () {
           $('.gnb').removeClass('hover');
         }
       );
+    } else {
+      // 모바일 → click
+      $('nav li > a').on('click', function (e) {
+        const $li = $(this).parent();
+        const $sub = $li.find('.twoD');
+        if ($sub.length) {
+          e.preventDefault();
+          $('.twoD').stop(true, true).slideUp(200);
+          $sub.stop(true, true).slideToggle(200);
+        }
+      });
     }
   }
 
   setNavInteraction();
 
   $(window).on('resize', function () {
-    const newIsMobile = window.innerWidth <= 799;
+    const newIsMobile = window.innerWidth <= 1024;
     if (newIsMobile !== isMobileView) {
       isMobileView = newIsMobile;
       setNavInteraction();
     }
   });
+
+  // 👉 스크롤 시 클래스 추가/제거
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 50) {   // 50px 이상 스크롤 시
+      $('.gnb').addClass('scrolled');
+    } else {
+      $('.gnb').removeClass('scrolled');
+    }
+  });
 });
+
 
 const gnbUl = document.querySelector('.gnb nav');
 const line = document.querySelector('.gnb .line');
@@ -82,8 +103,28 @@ if (hamber) {
 }
 
 // Swiper 슬라이드 및 프로그레스 링
-const swiperContainer = document.querySelector('.main_slide .swiper-container');
-if (swiperContainer) {
+document.addEventListener('DOMContentLoaded', () => {
+  const swiperContainer = document.querySelector('.main_slide .swiper-container');
+  const circle = document.querySelector('.progress-ring_circle');
+
+  if (!swiperContainer || !circle) return;
+
+  // ✅ 원의 길이 계산
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+
+  // ✅ stroke 기본 세팅
+  circle.style.strokeDasharray = `${circumference}`;
+  circle.style.strokeDashoffset = `${circumference}`; // 처음엔 안 보이게
+
+  // ✅ 최초 로딩 시에도 1회 애니메이션 시작
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      circle.style.strokeDashoffset = '0';
+    });
+  });
+
+  // ✅ Swiper 초기화
   const swiper = new Swiper(swiperContainer, {
     effect: 'fade',
     fadeEffect: { crossFade: true },
@@ -101,28 +142,28 @@ if (swiperContainer) {
     },
     on: {
       slideChangeTransitionStart: function () {
-        const circle = document.querySelector('.progress-ring_circle');
-        if (!circle) return;
-
+        // ✅ 애니메이션 다시 시작
         circle.style.transition = 'none';
-        circle.style.strokeDashoffset = 138;
+        circle.style.strokeDashoffset = `${circumference}`;
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             circle.style.transition = 'stroke-dashoffset 3s linear';
-            circle.style.strokeDashoffset = 0;
+            circle.style.strokeDashoffset = '0';
           });
         });
       }
     }
   });
 
+  // ✅ 버튼 클릭으로 다음 슬라이드 이동
   const arrow = document.querySelector('.arrow-icon');
   if (arrow) {
     arrow.addEventListener('click', function () {
       swiper.slideNext();
     });
   }
-}
+});
+
 
 function revealOnScroll() {
   const contents = document.querySelectorAll('.content');
@@ -151,7 +192,7 @@ const DOWN_OFFSET = 250;
 const UP_OFFSET = 50;
 
 degitalSections.forEach((section) => {
-  if (window.innerWidth <= 799) return;
+  if (window.innerWidth <= 1024) return;
 
   const track = section.querySelector('.horizontal-track');
   const boxes = section.querySelectorAll('.offeringBox');
