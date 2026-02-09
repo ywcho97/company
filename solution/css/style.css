@@ -977,6 +977,9 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .bizCommon .bizTit h3{font-size: 2rem;}
     .bizCommon .bizTit h3::before{font-size: 1.75rem;}
     .bizCont .bizShorts .bizLink{}
+    .bizCont .bizLink .videoImg .videoBg{height: 100%;}
+    .bizCont .bizLink .videoImg .videoBox{width: 80%; padding: 10px;}
+    .bizCont .bizNews .bizLink .bizText{padding: 15px;}
     .bizLink iframe{height: revert-layer;}
     .bizLatest{flex-direction: column;}
 
