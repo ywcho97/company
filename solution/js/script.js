@@ -561,3 +561,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+
+var swiper = new Swiper('.sub_slide .swiper-container', {
+    // Optional parameters
+    // direction: 'horizontal',
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    loop: true,
+    loopAdditionalSlides : 1,
+    speed: 1000,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay:{
+        delay: 3000,
+        disableOnInteraction: false, // false-스와이프 후 자동 재생
+    },
+    
+});
