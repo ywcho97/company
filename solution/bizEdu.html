@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 다크모드 막기 -->
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#ffffff">
+    <title>KMAC Digital Solution</title>
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- swiper 슬라이드 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="modal" id="siteMap">
+        <div class="bg" onclick="closePopup('siteMap')"></div>
+        <div class="modal_cont">
+            <div class="modalTop">
+                <p>사이트맵</p>
+                <button type="button" class="close" onclick="closePopup('siteMap')"><i class="mdi mdi-close"></i></button>
+            </div>
+            <div class="modalCont">
+                <p>서비스</p>
+                <ul>
+                    <li>
+                        <a href="sub01.html">Safe- On</a>
+                    </li>
+                    <li>
+                        <a href="sub02.html">Green-Matrix</a>
+                    </li>
+                    <li>
+                        <a href="sub03.html">K-DQMS</a>
+                    </li>
+                    <li>
+                        <a href="sub04.html">AI Studio</a>
+                    </li>
+                    <li>
+                        <a href="bizEdu.html">C-BIZ EDU</a>
+                    </li>
+                </ul>
+                <p>인사이트</p>
+                <ul>
+                    <li>
+                        <a href="sub05.html">KMAC News</a>
+                    </li>
+                    <li>
+                        <a href="sub06.html">KMAC BIZ & Insight</a>
+                    </li>
+                    <li>
+                        <a href="sub07.html">KMAC TV</a>
+                    </li>
+                    <li>
+                        <a href="sub08.html">Conference</a>
+                    </li>
+                </ul>
+                <p>고객지원</p>
+                <ul>
+                    <li>
+                        <a href="help.html#tabCont1">1:1 문의하기</a>
+                    </li>
+                    <li>
+                        <a href="help.html#tabCont2">데모 시연 신청</a>
+                    </li>
+                </ul>
+                <p>회사소개</p>
+                <ul>
+                    <li>
+                        <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- <div id="include-headerSub"></div> -->
+        <div class="gnb sub">
+            <div class="line"></div>
+            <div class="top_logo logo">
+                <a href="./main.html">
+                    <img src="./img/mainLogo.png" alt="img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a style="cursor:pointer;">서비스</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub01.html">Safe- On</a>
+                                <a href="sub02.html">Green-Matrix</a>
+                                <a href="sub03.html">K-DQMS</a>
+                                <a href="sub04.html">AI Studio</a>
+                                <a href="bizEdu.html">C-BIZ EDU</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">인사이트</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub05.html">KMAC News</a>
+                                <a href="sub06.html">KMAC BIZ & Insight</a>
+                                <a href="sub07.html">KMAC TV</a>
+                                <a href="sub08.html">Conference</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">고객지원</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="help.html#tabCont1">1:1 문의하기</a>
+                                <a href="help.html#tabCont2">데모 시연 신청</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">회사소개</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="top_right">
+                <ul> 
+                    <li>
+                        <a href="help.html#tabCont1">문의하기</a>
+                    </li>
+                    <li>
+                        <a href="login.html">로그인</a>
+                    </li>
+                    <li>
+                        <a href="join01.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mob_menu">
+                <button type="button" class="hamber">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </button>
+            </div>
+        </div> <!-- //gnb -->
+        <div class="content_wrap detailPage" id="subPage">
+            <div class="detailTop">
+                <span class="location">Home / 서비스 / C-BIZ EDU</span>
+                <div class="detailTit">
+                    <h2>C-BIZ EDU</h2>
+                </div>
+                <div class="justify">
+                    <p>
+                        유학생을 위한, 교수의 한국어 강의를 70개국 언어로 동시 번역하여<br/>
+                        스마트안경 등 다양한 디바이스에 자막으로 제공하는 실시간 AI 자막 번역 솔루션입니다.
+                    </p>
+                    <div class="btn_wrap">
+                        <button type="button" class="main">데모 신청</button>
+                        <button type="button" class="orange">브로슈어 다운로드</button>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="detailCont">
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h2>
+                            "20만 유학생 시대, 언어 장벽 없는 글로벌 캠퍼스 구현"
+                        </h2>
+                        <p class="fontbold">AX기반 스마트 글라스를 활용하여,<br/>전세계의 학생들이 일상처럼 오가는 글로벌 교육 환경을 제공합니다.</p>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="group_wrap bizEdu">
+                            <div class="group content">
+                                <div class="box height100">
+                                    <dl class="textcenter">
+                                        <dt class="fc_blue marginb20"><img src="./img/bizIcon1.png" alt="img"></dt>
+                                        <dt>
+                                            실시간 듀얼 번역 모드로<br/>필요에 따라
+                                        </dt>
+                                        <dd>
+                                            0.5초 이내 모국어 자막 송출<br/>
+                                            평균 92% 정확도
+                                        </dd>
+                                        <dd class="caption">(국내 통·번역 기능 정확도高)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <div class="box height100">
+                                    <dl class="textcenter">
+                                        <dt class="fc_blue marginb20"><img src="./img/bizIcon2.png" alt="img"></dt>
+                                        <dt>
+                                            길고 복잡한 대화를<br/>더 스마트하게
+                                        </dt>
+                                        <dd>
+                                            70개국어 번역 가능<br/>
+                                            1:1 & 1:다 통·번역 가능
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <div class="box height100">
+                                    <dl class="textcenter">
+                                        <dt class="fc_blue marginb20"><img src="./img/bizIcon3.png" alt="img"></dt>
+                                        <dt>
+                                            언제 어디서나<br/>언어의 제약없이
+                                        </dt>
+                                        <dd>
+                                            <ul>
+                                                <li>-강의, 수업</li>
+                                                <li>-국제 컨퍼런스 및 포럼</li>
+                                                <li>-글로벌 토론 </li>
+                                                <li>-내한 뮤지컬, 연극, 콘서트</li>
+                                                <li>-국제연구 및 프로젝트 커뮤니케이션</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bizBox">
+                            <div class="blueBox">
+                                <h3>제품 사양</h3>
+                                <div class="bizBoxCont">
+                                    <dl>
+                                        <dt>무게</dt>
+                                        <dd>49g</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>FOV</dt>
+                                        <dd>30˚</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>RAM</dt>
+                                        <dd>2GB</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>ROM</dt>
+                                        <dd>32GB</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>밝기</dt>
+                                        <dd>1,500nits</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>WLAN</dt>
+                                        <dd>WIFI 6</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>CAMERA</dt>
+                                        <dd>
+                                            Lens resolution : 3024*4032<br/>
+                                            Lens aperture : F2.25 DFOV 109˚
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="boxCont">
+                                <img src="./img/bizProduct.png" alt="img">
+                                <p>※ 자막의 투명도 및 글꼴 크기 조절 가능</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="btn_wrap">
+                    <button type="button" onclick="location.href=('#none')" class="main">데모 신청</button>
+                </div> -->
+            </div>
+        </div>
+        <div class="section content">
+            <div class="sub_slide">
+                <!-- Slider Container -->
+                <div class="swiper-container">
+                    <!-- Slider Wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slider Slides -->
+                        <div class="swiper-slide">
+                            <img src="./img/bizSlide1.png" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/bizSlide2.png" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/bizSlide3.png" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/bizSlide4.png" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/bizSlide5.png" alt="img">
+                        </div>
+                    </div>
+                    <!-- scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                
+                    <div class="slide_control">
+                        <!-- pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- <ul class="slide_btn">
+                            <li class="slide_pause slide_pause1 btn_on"><a href="#none"><img src="./img/pause.png" style="width: 12px;" alt="img"></a></li>
+                            <li class="slide_play slide_play1"><a href="#none"><img src="./img/play.png" style="width: 12px;" alt="img"></a></li>
+                        </ul> -->
+                        <!-- buttons -->
+                    </div>
+                    <div class="swiper-button-prev slider_button">
+                        <i class="mdi mdi-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next slider_button">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </div>
+                </div>
+            </div> <!-- class="main_slide" -->
+        </div>
+        <div class="frame">
+            <div class="detailCont">
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h2>C-BIZ EDU</h2>
+                        <blockquote>
+                            <strong>실시간 자막 번역</strong> 솔루션 도입을 통해 외국인 유학생의 학습 환경을 개선하고,<br/>
+                            저비용 투자로 <strong>대학의 글로벌 경쟁력</strong>을 획기적으로 제고하여 <strong>미래형 교육 인프라</strong>를 구축하고자 합니다.
+                        </blockquote>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="bizAbout">
+                            <div class="left">
+                                <p>LEARNING ENVIRONMENT</p>
+                                <h3>몰입하는 학습 경험 제공</h3>
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    <dd>글로벌 대학에서 <span>학습 몰입 경험</span> 및 <span>학업 성취도 향상</span></dd>
+                                    <dd>교수의 음성을 딜레이 없이 수강생의 모국어 자막 실시간 제공</dd>
+                                </dl>
+                            </div>
+                            <div class="bizCircle">
+                                <p>강의<br/>이해도 향상</p>
+                            </div>
+                        </div>
+                        <div class="bizAbout">
+                            <div class="left">
+                                <p>STUDENT EXPERIENCE</p>
+                                <h3>대학생활 만족도 증가</h3>
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    <dd>언어의 제약 없이 친구를 사귀고, 다양한 수업을 대외활동을<br/>즐기며 <span>대학 생활 적응과 만족도 상승</span></dd>
+                                    <dd>실시간 AI 번역된 언어로 교육 격차 완전 해결</dd>
+                                </dl>
+                            </div>
+                            <div class="bizCircle">
+                                <p>대학<br/>적응력 상승</p>
+                            </div>
+                        </div>
+                        <div class="bizAbout">
+                            <div class="left">
+                                <p>PUBLIC INVESTMENT</p>
+                                <h3>합리적인 투자와<br/>가시적 성과</h3>
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    <dd>재정지원사업 내 무분별한 예산 사용이 아닌<br/><span>가시적 성과</span>를 담보하는 <span>합리적인 투자</span> 가능</dd>
+                                    <dd><span>대학 모바일 앱 연계</span> 또는 도입하여 효과성 극대화</dd>
+                                </dl>
+                            </div>
+                            <div class="bizCircle">
+                                <p>정부<br/>사업 연계</p>
+                            </div>
+                        </div>
+                        <div class="bizAbout">
+                            <div class="left">
+                                <p>GLOBAL VISION</p>
+                                <h3>기관 글로벌 경쟁력 강화</h3>
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    
+                                    <dd>미래형 교육 인프라 구축을 통한 <span>대학 국제화</span> 및 <span>경쟁력 강화</span></dd>
+                                    <dd>다국적 유학생 유입 및 교내 교육·연구 성과 창출</dd>
+                                </dl>
+                            </div>
+                            <div class="bizCircle">
+                                <p>대학<br/>국제화지수<br/>향상</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="bizCont">
+                        <div class="bizShorts bizCommon">
+                            <div class="bizTit">
+                                <h3>C-BIZ Shorts</h3>
+                            </div>
+                            <div class="bizLink">
+                                <iframe width="315" height="560" src="https://www.youtube.com/embed/2W1K6d5r4Is?si=YUEAOB6cdeF8LdUC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="bizText">
+                                    <h3>#PNU_대학생활 [AI 통번역 안경,with 미래 #PNU_대학생활 [AI 통번역 안경,with 미래</h3>
+                                    <p class="date">2025.12.03</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bizNews bizCommon">
+                            <div class="bizTit">
+                                <h3>C-BIZ News</h3>
+                            </div>
+                            <div class="bizLink" onclick="window.open('https://www.etnews.com/20250701000393', '_blank')" style="cursor:pointer;">
+                                <div class="videoImg">
+                                    <div class="videoBg"></div>
+                                    <img src="./img/bizNews1.jpg" alt="img">
+                                    <div class="videoBox">
+                                        <p>
+                                            국내 최초 MICE 전용 AI 스마트안경
+                                            동시통역시스템 도입
+                                            6월 19일 코엑스 MVEX 포럼에 15개국어
+                                            동시통역 제공
+                                        </p>
+                                    </div>
+                                    <div class="videoTag">
+                                        <p>#전자신문</p>
+                                    </div>
+                                </div>
+                                <div class="bizText">
+                                    <h3>동시통역 AI 스마트안경’씨비즈 제공</h3>
+                                    <p class="date">2025.12.03</p>
+                                </div>
+                            </div>
+                            <div class="bizLink" onclick="window.open('https://www.mk.co.kr/news/it/11486950', '_blank')" style="cursor:pointer;">
+                                <div class="videoImg">
+                                    <div class="videoBg"></div>
+                                    <img src="./img/bizNews2.jpg" alt="img">
+                                    <div class="videoBox">
+                                        <p>
+                                            “국가 공인기관 인증 기준 98%의 음성인식 정확도를 
+                                            확보했고, 음성을 자막으로 변환하는 데 걸리는 시간은 
+                                            0.3초가 채 되지 않는다”
+                                        </p>
+                                    </div>
+                                    <div class="videoTag">
+                                        <p>#조선비즈</p>
+                                    </div>
+                                </div>
+                                <div class="bizText">
+                                    <h3>'AI 자막 안경'으로 언어의 장벽 허물겁니다</h3>
+                                    <p class="date">2025.12.03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bizLatest">
+                        <button type="button" class="btn" onclick="window.open('https://xpertinc.co.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=168744072&t=board','_blank')">
+                            ‘제 6회 김치의 날’ 씨비즈 AI 통역 스마트안경 도입
+                        </button>
+                        <button type="button" class="btn" onclick="window.open('https://xpertinc.co.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=168683633&t=board','_blank')">
+                            ‘2025 이데일리 글로벌 AI 포럼’ 씨비즈 AI 통역 스마트안경 도입
+                        </button>
+                        <button type="button" class="btn" onclick="window.open('https://xpertinc.co.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=168519909&t=board','_blank')">
+                            ‘2025 로보월드’ 씨비즈 AI 통역 스마트안경 도입
+                        </button>
+                        <button type="button" class="btn" onclick="window.open('https://xpertinc.co.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=168519870&t=board','_blank')">
+                            ‘MVEX 2025 메타버스 엑스포’ 씨비즈 AI 통역 스마트안경 도입
+                        </button>
+                        <button type="button" class="btn" onclick="window.open('https://xpertinc.co.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=168519813&t=board​','_blank')">
+                            ‘KHF 2025 디지털 헬스테크 전시회’ 씨비즈 AI 통역 스마트안경 도입
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inquiryCont content">
+            <div class="gradient"></div>
+            <div class="inquiryText">
+                <h2>
+                    산업별 맞춤형 디지털 전환,<br/>
+                    지금 바로 시작해보세요.<br/>
+                    <span>KMAC Digital Solution이 함께합니다.</span>
+                </h2>
+            </div>
+            <div class="inquiryBtn">
+                <button type="button">1:1 문의하기</button>
+                <button type="button">데모 시연 신청하기</button>
+            </div>
+        </div>
+        <!-- <div id="include-footer"></div> -->
+        <div class="footer">
+            <div class="footerCont">
+                <img src="./img/white_logo.png" alt="img">
+                <div class="footerTop">
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <p>
+                            사업자등록번호 : 116-81-29581 | 통신판매자 신고번호 : 제 2008-서울영등포구-0368호<br/>
+                            직업정보제공사업자 : 서울남부지청 신고번호 J1204020220001 | TEL. 02. 3786. 0114 | 대표이사 사장 한수희
+                        </p>
+                    </div>
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <div class="footerLink">
+                            <ul>
+                                <li><a href="https://kma.or.kr/kr/main.do" target="_blank" rel="noopener noreferrer">한국능률협회</a></li>
+                                <li><a href="https://kmamedia.co.kr/" target="_blank" rel="noopener noreferrer">KMA미디어</a></li>
+                                <li><a href="https://www.kmaresearch.co.kr/main.asp" target="_blank" rel="noopener noreferrer">KMA리서치</a></li>
+                                <li><a href="https://kmaplus.co.kr/" target="_blank" rel="noopener noreferrer">KMA플러스</a></li>
+                                <li><a href="http://hoinam.or.kr/" target="_blank" rel="noopener noreferrer">KMA회남재단</a></li>
+                                <li><a href="https://www.chiefexe.com/index.asp" target="_blank" rel="noopener noreferrer">CE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerText">
+                        <h3>Contact</h3>
+                        <p>(07241) 서울특별시 영등포구 여의공원로 101 (여의도동, C.C.M.M빌딩), 8층</p>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <ul class="footer-bottom-nav">
+                        <li><a href="https://kmac.co.kr/portal/index#util_contact">오시는 길</a></li>
+                        <li><a href="#none" onclick="togglePopup('siteMap')">사이트맵</a></li>
+                        <li><a href="help.html#tabCont1">문의하기</a></li>
+                        <li><a href="https://kmac.co.kr/portal/index#util_terms">이용약관</a></li>
+                        <li class="on"><a href="https://kmac.co.kr/portal/index#util_privacy" class="bold">개인정보처리방침</a></li>
+                    </ul>
+                    <span>ⓒ 2025 KMAC. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div><!--  class="wrap" -->
+</body>
+
+<script type="text/javascript" src="./js/script.js"></script>
+</html>
