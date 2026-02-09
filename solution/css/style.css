@@ -958,7 +958,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sub_slide .swiper-slide img{height: 30vh;}
 
     .frame{padding: 0 10px;}
-    .sectionCont .bizAbout{display: block;}
+    .sectionCont .bizAbout{display: block; padding: 10px;}
     .sectionCont .bizAbout>div{margin-bottom: 10px;}
     .sectionCont .bizAbout .left{border-right: 0;}
     .sectionCont .bizAbout .bizCircle{width: 100%; height: auto; border-radius: 10px; padding: 10px;}
@@ -972,4 +972,5 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .footer .footerCont{padding: 50px 20px;}
     .footer .footerCont .footerTop{flex-direction: column;}
     .footer .footerCont .footerBottom ul li a{font-size: 1.125rem;}
+
 }
