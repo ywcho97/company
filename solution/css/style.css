@@ -963,6 +963,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sectionCont .bizAbout .left{border-right: 0;}
     .sectionCont .bizAbout .bizCircle{width: 100%; height: auto; border-radius: 10px; padding: 10px;}
     .sectionCont .bizAbout .bizCircle p{text-align: center;}
+    .sectionCont .bizAbout .right dl dd{width: calc(100% - 20px);}
     .bizCont{flex-direction: column;}
     .bizCommon .bizTit h3{font-size: 2rem;}
     .bizCommon .bizTit h3::before{font-size: 1.75rem;}
