@@ -953,7 +953,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     #siteMap.modal .modal_cont .modalCont a{font-size: 1rem;}
 
     /* c-bizEdu */
-    .bizBox{flex-direction: column-reverse;}
+    .bizBox{flex-direction: column-reverse; padding: 15px;}
     .sub_slide{margin-top: -100px;}
     .sub_slide .swiper-slide img{height: 30vh;}
 
