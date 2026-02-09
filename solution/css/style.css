@@ -579,7 +579,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 .sub_slide .swiper-slide .slide_ment .slide_import span {color: #fff; font-size: 1.875rem; line-height: 4.375rem; font-weight: 500;}
 .sub_slide .swiper-slide .slide_btn {position: absolute; bottom: -11rem;}
 .sub_slide .swiper-slide .slide_btn button {color: #fff; padding: 1rem 0; text-align: center; width: 15.75rem; border-radius: 2.5rem; border: .0625rem solid #fff; font-size: 1.25rem;}
-.sub_slide .slide_control {position: absolute; left: 50%; bottom: 50px;}
+.sub_slide .slide_control {position: absolute; left: 50%; bottom: 50px; transform: translateX(-50%); z-index: 10;}
 .sub_slide .slide_control .swiper-pagination {margin: 0 0 1.25rem 0; position: relative; width: 100%;}
 .sub_slide .slide_control .swiper-pagination-bullet {width: .75rem; height: .75rem; background-color: #7a7a7a; opacity: 1; border-radius: .75rem;}
 .sub_slide .slide_control .swiper-pagination-bullet-active {background: #fff;}
@@ -972,7 +972,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sectionCont .bizAbout .bizCircle.mob{display: block;}
     .sectionCont .bizAbout .bizCircle p{text-align: center;}
     .sectionCont .bizAbout .right dl dd{width: calc(100% - 20px);}
-    .sub_slide .slide_control{transform: translateX(-50%); bottom: 10px; z-index: 10;}
+    .sub_slide .slide_control{bottom: 10px;}
     .bizCont{flex-direction: column;}
     .bizCommon .bizTit h3{font-size: 2rem;}
     .bizCommon .bizTit h3::before{font-size: 1.75rem;}
