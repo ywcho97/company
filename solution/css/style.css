@@ -810,7 +810,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .inquiryCont .inquiryText h2{font-size: 24px; line-height: 32px;}
 
     .inquiryCont .inquiryBtn{margin-top: 50px;}
-    .inquiryCont .inquiryBtn button{font-size: 14px; width: 200px;}
+    .inquiryCont .inquiryBtn button{font-size: 14px; width: 200px; margin-bottom: 10px;} 
 
     .sub_wrap .terms_wrap{padding-left: 10px;}
     .sub_wrap .agreeView{padding: 3px 10px;}
