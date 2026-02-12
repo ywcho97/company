@@ -513,7 +513,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 .group_wrap.bizEdu .group .box dl dd.caption{font-size: 1rem;}
 .group_wrap.bizEdu .group .box dl dd ul{display: flex; flex-wrap: wrap; gap: 5px 20px; padding: 0 15px; justify-content: center;}
 .group_wrap.bizEdu .group .box dl dd ul li{text-align: left;}
-.group_wrap.bizEdu .group .box dl dd ul li:last-child {width: 100%; }
+/* .group_wrap.bizEdu .group .box dl dd ul li:last-child {width: 100%; } */
 
 .bizBox{width: 100%; border-radius: 10px; border: 1px solid var(--lightgray); padding: 30px; display: flex; justify-content: space-between; gap: 50px; margin-top: 50px;}
 
@@ -989,3 +989,4 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .footer .footerCont .footerBottom ul li a{font-size: 1.125rem;}
 
 }
+
